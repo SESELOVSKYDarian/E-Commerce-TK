@@ -7,9 +7,16 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #11111b;
+    background-color: #f4f4f4f5;
 }
 
+/*nav*/
+.menu-logo img{
+    max-width: 4%;
+    height: auto;
+}
+
+/*header title*/
 .text {
     margin: 8% 7% 5% 5%;
 }
@@ -17,7 +24,7 @@ body {
 .text h1 {
     padding: 5% 0 3% 0;
     font-family: 'Xeroda', sans-serif;
-    color: #E3E3E3;
+    color: #000000;
     text-align: right;
     font-size: 8rem;
     letter-spacing: -0.5px;
@@ -25,17 +32,17 @@ body {
 }
 
 .text p {
-    color: #E3E3E3;
+    color: #000000;
     font-size: 1.8rem;
     text-align: right;
     margin-left: 60%;
 }
 
-/* Barra para scrollear */
+/* bar to scroll */
 body {
-    --sb-track-color: #232E33;
-    --sb-thumb-color: #8b87f9;
-    --sb-size: 11px;
+    --sb-track-color: #f8f8f8;
+    --sb-thumb-color: #282828e3;
+    --sb-size: 9px;
 }
 
 body::-webkit-scrollbar {
@@ -50,7 +57,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 24px;
-    border: 2px solid #232E33;
 }
 
 @supports not selector(::-webkit-scrollbar) {
