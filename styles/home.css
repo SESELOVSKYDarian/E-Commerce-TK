@@ -1,66 +1,134 @@
-@import url('https://fonts.cdnfonts.com/css/xeroda');
+@import url("https://fonts.cdnfonts.com/css/xeroda");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    cursor: default;
+  margin: 0;
+  padding: 0;
+  cursor: default;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4f5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4f5;
 }
 
 /*nav*/
-.menu-logo img{
-    max-width: 4%;
-    height: auto;
+.menu-logo img {
+  max-width: 12%;
+  height: auto;
+  padding-top: 2%;
+  margin-left: 1%;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 1% 2%;
+  margin: 0 auto;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.137);
+}
+
+.menu-container .menu-center {
+  padding-right: 33%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.menu-container a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-container .menu-center ul,
+.menu-container .menu-right ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-center {
+  padding-right: 30%;
+  text-align: center;
+}
+
+.menu-container .menu-center li,
+.menu-container .menu-right li {
+  font-size: 22px;
+  margin-left: 25px;
+  margin-top: 3%;
+}
+
+.menu-container .bx {
+  margin-top: 35%;
+  font-size: 25px;
+}
+
+.menu-container .menu-right li a:hover .bx,
+.menu-container .menu-center li a:hover {
+  color: #241bd1;
 }
 
 /*header title*/
 .text {
-    margin: 8% 7% 5% 5%;
+  margin: 8% 7% 5% 5%;
 }
 
 .text h1 {
-    padding: 5% 0 3% 0;
-    font-family: 'Xeroda', sans-serif;
-    color: #000000;
-    text-align: right;
-    font-size: 8rem;
-    letter-spacing: -0.5px;
-    line-height: 0.8em;
+  padding: 5% 0 3% 0;
+  font-family: "Xeroda", sans-serif;
+  color: #000000;
+  text-align: right;
+  font-size: 8rem;
+  letter-spacing: -0.5px;
+  line-height: 0.8em;
 }
 
 .text p {
-    color: #000000;
-    font-size: 1.8rem;
-    text-align: right;
-    margin-left: 60%;
+  color: #000000;
+  font-size: 1.8rem;
+  text-align: right;
+  margin-left: 60%;
+}
+
+.headphone img {
+  position: absolute;
+  max-width: 25%;
+  height: auto;
+  top: 35%;
+  left: 15%;
+  transform: translate(-35%, -15%);
 }
 
 /* bar to scroll */
 body {
-    --sb-track-color: #f8f8f8;
-    --sb-thumb-color: #282828e3;
-    --sb-size: 9px;
+  --sb-track-color: #f8f8f8;
+  --sb-thumb-color: #282828e3;
+  --sb-size: 9px;
 }
 
 body::-webkit-scrollbar {
-    width: var(--sb-size);
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 24px;
+  background: var(--sb-track-color);
+  border-radius: 24px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 24px;
+  background: var(--sb-thumb-color);
+  border-radius: 24px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
-    body {
-        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-    }
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
