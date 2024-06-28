@@ -1,8 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/xeroda");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,10 +13,38 @@ body {
   cursor: default;
 }
 
+/* bar to scroll */
+body {
+  --sb-track-color: #f8f8f8;
+  --sb-thumb-color: #282828e3;
+  --sb-size: 9px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 24px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 24px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 /*nav*/
 .menu-logo img {
-  max-width: 12%;
+  max-width: 4rem;
   height: auto;
+  min-width: 12%;
   padding-top: 2%;
   margin-left: 1%;
 }
@@ -33,7 +63,7 @@ body {
 }
 
 .menu-container .menu-center {
-  padding-right: 33%;
+  padding-right: 2%;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -77,11 +107,21 @@ body {
 }
 
 /*header title*/
-.text {
+header {
+  height: 100vh;
+  background: linear-gradient(
+    circle at top left,
+    rgba(72, 78, 128, 0.377) 0%,
+    rgb(235, 235, 235) 30%,
+    rgba(103, 109, 156, 0.555) 100%
+  );
+}
+
+.title {
   margin: 8% 7% 5% 5%;
 }
 
-.text h1 {
+.title h1 {
   padding: 5% 0 3% 0;
   font-family: "Xeroda", sans-serif;
   color: #000000;
@@ -91,7 +131,7 @@ body {
   line-height: 0.8em;
 }
 
-.text p {
+.title p {
   color: #000000;
   font-size: 1.8rem;
   text-align: right;
@@ -107,29 +147,134 @@ body {
   transform: translate(-33%, -15%);
 }
 
-/* bar to scroll */
-body {
-  --sb-track-color: #f8f8f8;
-  --sb-thumb-color: #282828e3;
-  --sb-size: 9px;
+/*section on sale*/
+.on-sale {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle at top left,
+    rgba(72, 78, 128, 0.377) 0%,
+    rgb(235, 235, 235) 30%,
+    rgba(103, 109, 156, 0.555) 100%
+  );
 }
 
-body::-webkit-scrollbar {
-  width: var(--sb-size);
+#radio-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 24px;
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #000000bd;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 24px;
+input[type="radio"]:checked {
+  background: linear-gradient(45deg, #373355, #3a25d6);
+  width: 40px;
+  border-radius: 50px;
 }
 
-@supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-  }
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: 3px;
+  background: linear-gradient(45deg, #373355, #3a25d6);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:hover {
+  border-radius: 50px;
+  width: 40px;
+  background: linear-gradient(45deg, #151133c2, #4d00dd);
+}
+
+input[type="radio"]:checked {
+  animation: radioExpand 0.2s ease-out;
+}
+
+.imagen-sale img {
+  max-width: 90%;
+  padding: 20px;
+  height: auto;
+  box-shadow: 0 8px 3px #00000011;
+  border-radius: 20px;
+}
+
+.imagen-sale {
+  margin: 1% 0 0 3%;
+}
+
+.sale {
+  display: flex;
+}
+
+.texto-sale {
+  max-width: 50%;
+  margin: 2% 5% 0 1%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto-sale h4 {
+  margin: 0 0 3% 0;
+  font-size: 3em;
+  align-items: center;
+}
+
+.border {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 7%;
+}
+
+.bordered-text {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  padding: 10px 10px 5px 10px;
+  font-size: 3em;
+  color: black;
+  border: 2px dashed black;
+  margin: 0;
+  width: fit-content;
+}
+
+.texto-sale p {
+  margin: 2% 0 0 0;
+  font-size: 1.3em;
+  align-items: center;
+}
+
+.shop-button {
+  background: linear-gradient(45deg, #373355, #3a25d6);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 2% 0 0 0;
+  align-items: center;
+}
+
+.shop-button:hover {
+  background: linear-gradient(45deg, #3a25d6, #373355);
 }

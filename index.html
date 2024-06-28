@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/home.css" />
     <link
+      rel="shortcut icon"
+      href="/multimedia/images/logo/favicon-white.ico"
+      type="image/x-icon"
+    />
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
@@ -43,7 +48,7 @@
           </ul>
         </div>
       </nav>
-      <div class="text">
+      <div class="title">
         <h1>
           Tech's <br />
           Kingdom
@@ -52,10 +57,40 @@
       </div>
       <div class="headphone">
         <img
-          src="/multimedia/images/products/airpodmaxappleblack.png"
-          alt="Headophones Apple Max Blue"
+          src="/multimedia/images/products/airpods/airpodmaxappleblack.png"
+          alt="Headophones Apple Max Black"
         />
       </div>
     </header>
+    <section class="on-sale">
+      <div class="sale">
+        <div class="imagen-sale">
+          <img
+            id="imagenSlide"
+            src="/multimedia/images/products/phones/iphones/iphone12pro.png"
+            alt="iPhone"
+          />
+          <div id="radio-container">
+            <input type="radio" id="radio1" name="radio" value="iphone" />
+            <input type="radio" id="radio2" name="radio" value="watch" />
+            <input type="radio" id="radio3" name="radio" value="monitor" />
+          </div>
+        </div>
+        <div class="texto-sale">
+          <div class="border">
+            <h5 class="bordered-text">ON SALE!</h5>
+          </div>
+          <h4 id="textoTituloSlide">iPhone 12 Pro</h4>
+          <p id="textoSlide">
+            The iPhone 12 Pro features a 6.1' Super Retina XDR display, a
+            powerful A14 Bionic chip, and a triple-camera system with LiDAR for
+            advanced photography and AR. It offers 5G connectivity and an
+            elegant stainless steel design.
+          </p>
+          <button type="button" class="shop-button">Shop Now</button>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="/scripts/slider.js"></script>
 </html>

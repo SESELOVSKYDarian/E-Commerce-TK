@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.164);
+  border-radius: 20px;
+}
+
+.image img {
+  width: 12em;
+  height: auto;
+  margin: auto;
+  padding: 10px 10px;
+  display: grid;
+  align-items: center;
+}
+
+.image {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: auto;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.card-button button {
+  text-align: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.493);
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(0, 93, 199);
+  padding: 10px;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.card-button button:hover {
+  transform: scale(1.1);
+  background-color: rgb(44, 131, 230);
+}
+
+.card-text {
+  display: flex;
+  align-items: center;
+}
+
+.card-favorite {
+  justify-content: right;
+  padding: 5px 10px 0 0;
+}
+
+.card-favorite i {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.name-product {
+  max-width: 10em;
+  justify-content: left;
+  padding: 5px 10px 0 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.cart {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  text-align: center;
+}
+
+.cart-text {
+  justify-content: left;
+}
