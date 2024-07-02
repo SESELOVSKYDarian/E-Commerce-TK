@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/styles/home.css" />
     <link
       rel="shortcut icon"
-      href="/multimedia/images/logo/favicon-white.ico"
+      href="/multimedia/images/logo/logo-white-1.png"
       type="image/x-icon"
     />
     <link
@@ -19,10 +19,10 @@
     <header>
       <nav class="menu-container">
         <div class="menu-logo">
-          <img src="/multimedia/images/logo/tk-logo.png" alt="TK" />
+          <img src="/multimedia/images/logo/logo-black-1.png" alt="TK" />
         </div>
         <div class="menu-center">
-          <ul>
+          <ul class="menu-list">
             <li><a href="#">Home</a></li>
             <li><a href="/public/shop.html">Shop</a></li>
             <li><a href="/public/aboutus.html">About</a></li>
@@ -47,29 +47,99 @@
             </li>
           </ul>
         </div>
+        <div class="menu-hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/public/shop.html">Shop</a></li>
+            <li><a href="/public/aboutus.html">About</a></li>
+            <li>
+              <a href=""><i class="bx bx-search"></i></a>
+            </li>
+            <li>
+              <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
+            </li>
+            <li>
+              <a href="/public/cart.html"><i class="bx bx-cart"></i></a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <div class="title">
-        <h1>
-          Tech's <br />
-          Kingdom
-        </h1>
-        <p>Empowering Innovation</p>
+
+      <div class="center">
+        <div class="headphone">
+          <img
+            src="/multimedia/images/products/airpods/airpodmaxappleblack.png"
+            alt="Headophones Apple Max Black"
+          />
+        </div>
+        <div class="title">
+          <h1>
+            Tech's <br />
+            Kingdom
+          </h1>
+          <p>Empowering Innovation</p>
+        </div>
       </div>
-      <div class="headphone">
-        <img
-          src="/multimedia/images/products/airpods/airpodmaxappleblack.png"
-          alt="Headophones Apple Max Black"
-        />
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="sponsor1.jpg" alt="Sponsor 1" />
+          <img src="sponsor2.jpg" alt="Sponsor 2" />
+          <img src="sponsor3.jpg" alt="Sponsor 3" />
+          <!-- Agrega más imágenes según tus necesidades -->
+        </div>
       </div>
     </header>
-    <section class="on-sale">
+    <section>
+      <div class="on-sale">
+        <div class="sale">
+          <div class="imagen-sale">
+            <div class="imagen">
+              <img
+                id="imagenSlide"
+                src="/multimedia/images/products/phones/iphones/iphone12pro.png"
+                alt="iPhone"
+              />
+            </div>
+            <div id="radio-container">
+              <input type="radio" id="radio1" name="radio" value="iphone" />
+              <input type="radio" id="radio2" name="radio" value="watch" />
+              <input type="radio" id="radio3" name="radio" value="monitor" />
+            </div>
+          </div>
+          <div class="texto-sale">
+            <div class="price-border">
+              <div class="price">
+                <h6 id="textPrice">$900.000</h6>
+              </div>
+              <div class="border">
+                <h5 class="bordered-text">ON SALE!</h5>
+              </div>
+            </div>
+            <h4 id="textoTituloSlide">iPhone 12 Pro</h4>
+            <p id="textoSlide">
+              The iPhone 12 Pro features a 6.1' Super Retina XDR display, a
+              powerful A14 Bionic chip, and a triple-camera system with LiDAR
+              for advanced photography and AR. It offers 5G connectivity and an
+              elegant stainless steel design.
+            </p>
+            <button type="button" class="shop-button">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular">
       <div class="sale">
         <div class="imagen-sale">
-          <img
-            id="imagenSlide"
-            src="/multimedia/images/products/phones/iphones/iphone12pro.png"
-            alt="iPhone"
-          />
+          <div class="imagen">
+            <img
+              id="imagenSlide"
+              src="/multimedia/images/products/phones/iphones/iphone12pro.png"
+              alt="iPhone"
+            />
+          </div>
           <div id="radio-container">
             <input type="radio" id="radio1" name="radio" value="iphone" />
             <input type="radio" id="radio2" name="radio" value="watch" />
@@ -77,8 +147,15 @@
           </div>
         </div>
         <div class="texto-sale">
-          <div class="border">
-            <h5 class="bordered-text">ON SALE!</h5>
+          <div class="price-border">
+            <div class="price">
+              <h6 id="textPrice">$900.000</h6>
+            </div>
+            <div class="border">
+              <h5 class="bordered-text">
+                <i class="bx bxs-hot hot"></i>POPULAR!
+              </h5>
+            </div>
           </div>
           <h4 id="textoTituloSlide">iPhone 12 Pro</h4>
           <p id="textoSlide">
@@ -91,6 +168,50 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <p class="footer-text">
+          At Tech's Kingdom, our mission is to bring you the latest and most
+          innovative technology gadgets that make life easier, more enjoyable,
+          and more connected. Since our founding in 2024, we have been dedicated
+          to providing top-notch products and exceptional customer service to
+          tech enthusiasts around the world.
+        </p>
+        <p class="footer-text">
+          <strong>We specialize in:</strong> Smartphones and Accessories, Smart
+          Home Devices, Wearable Technology, Audio and Entertainment, Computer
+          and Gaming
+        </p>
+        <div class="footer-icons">
+          <div class="icon-text">
+            <a
+              href="https://www.instagram.com/yourusername"
+              target="_blank"
+              class="footer-icon-link"
+            >
+              <i class="bx bxl-instagram footer-icon"></i>
+            </a>
+            <p>@techskingdom</p>
+          </div>
+          <div class="icon-text">
+            <a href="mailto:info@techskingdom.com" class="footer-icon-link">
+              <i class="bx bx-envelope footer-icon"></i>
+            </a>
+            <p>info@techskingdom.com</p>
+          </div>
+          <div class="icon-text">
+            <a href="tel:+1234567890" class="footer-icon-link">
+              <i class="bx bxl-whatsapp footer-icon"></i>
+            </a>
+            <p>+54 9 (223) 543-4206</p>
+          </div>
+        </div>
+        <p class="footer-text copy">
+          &copy; 2024 Tech's Kingdom. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
   <script src="/scripts/slider.js"></script>
+  <script src="/scripts/burger.js"></script>
 </html>
