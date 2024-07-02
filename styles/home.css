@@ -60,6 +60,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menu-container {
+  position: sticky;
+  top: 0;
+  background-color: #ebebebf5;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,12 +74,6 @@ body::-webkit-scrollbar-thumb {
   padding: 1% 2%;
   margin: 0 auto;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.137);
-}
-
-.nav-container {
-  position: sticky;
-  top: 0;
-  background-color: #ebebebf5;
 }
 
 .menu-container .menu-center {
