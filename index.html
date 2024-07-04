@@ -16,6 +16,13 @@
     <title>Tech's Kingdom</title>
   </head>
   <body>
+    <div id="loading-container">
+      <img
+        src="/multimedia/images/logo/logo-black-2.png"
+        alt="Loading..."
+        id="loading-logo"
+      />
+    </div>
     <nav class="menu-container">
       <div class="menu-logo">
         <img src="/multimedia/images/logo/logo-black-1.png" alt="TK" />
@@ -30,42 +37,39 @@
       <div class="menu-right">
         <ul>
           <li>
-            <a>
-              <i class="bx bx-search"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/public/favorites.html">
-              <i class="bx bx-heart"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/public/cart.html">
-              <i class="bx bx-cart"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="menu-hamburger">
-        <i class="bx bx-menu"></i>
-      </div>
-      <div class="mobile-menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="/public/shop.html">Shop</a></li>
-          <li><a href="/public/aboutus.html">About</a></li>
-          <li>
-            <a href=""><i class="bx bx-search"></i></a>
+            <a><i class="bx bx-search"></i></a>
           </li>
           <li>
             <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
           </li>
           <li>
-            <a href="/public/cart.html"><i class="bx bx-cart"></i></a>
+            <a href="/public/cart.html" class="cart-icon"
+              ><i class="bx bx-cart"></i
+            ></a>
+            <span class="cart-icon-text"></span>
           </li>
         </ul>
       </div>
+      <div class="menu-hamburger"><i class="bx bx-menu"></i></div>
     </nav>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="/public/shop.html">Shop</a></li>
+        <li><a href="/public/aboutus.html">About</a></li>
+        <li>
+          <a><i class="bx bx-search"></i></a>
+        </li>
+        <li>
+          <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
+        </li>
+        <li>
+          <a href="/public/cart.html"><i class="bx bx-cart"></i></a>
+          <span class="cart-icon-text"></span>
+        </li>
+      </ul>
+    </div>
+
     <header>
       <div class="center">
         <div class="headphone">
@@ -213,4 +217,5 @@
   </body>
   <script src="/scripts/slider.js"></script>
   <script src="/scripts/burger.js"></script>
+  <script src="/scripts/cart.js"></script>
 </html>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
     <link rel="stylesheet" href="/styles/shop.css" />
-    <title>Products</title>
     <link
       rel="shortcut icon"
       href="/multimedia/images/logo/logo-white-1.png"
@@ -16,58 +16,60 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="menu-container">
-        <div class="menu-logo">
-          <img src="/multimedia/images/logo/logo-black-1.png" alt="TK" />
-        </div>
-        <div class="menu-center">
-          <ul class="menu-list">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="/public/aboutus.html">About</a></li>
-          </ul>
-        </div>
-        <div class="menu-right">
-          <ul>
-            <li>
-              <a>
-                <i class="bx bx-search"></i>
-              </a>
-            </li>
-            <li>
-              <a href="/public/favorites.html">
-                <i class="bx bx-heart"></i>
-              </a>
-            </li>
-            <li>
-              <a href="/public/cart.html">
-                <i class="bx bx-cart"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="menu-hamburger">
-          <i class="bx bx-menu"></i>
-        </div>
-      </nav>
-      <div class="mobile-menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="/public/shop.html">Shop</a></li>
+    <div id="loading-container">
+      <img
+        src="/multimedia/images/logo/logo-black-2.png"
+        alt="Loading..."
+        id="loading-logo"
+      />
+    </div>
+    <nav class="menu-container">
+      <div class="menu-logo">
+        <img src="/multimedia/images/logo/logo-black-1.png" alt="TK" />
+      </div>
+      <div class="menu-center">
+        <ul class="menu-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Shop</a></li>
           <li><a href="/public/aboutus.html">About</a></li>
+        </ul>
+      </div>
+      <div class="menu-right">
+        <ul>
           <li>
-            <a href=""><i class="bx bx-search"></i></a>
+            <a><i class="bx bx-search"></i></a>
           </li>
           <li>
             <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
           </li>
           <li>
-            <a href="/public/cart.html"><i class="bx bx-cart"></i></a>
+            <a href="/public/cart.html" class="cart-icon"
+              ><i class="bx bx-cart"></i
+            ></a>
+            <span class="cart-icon-text"></span>
           </li>
         </ul>
       </div>
-    </header>
+      <div class="menu-hamburger"><i class="bx bx-menu"></i></div>
+    </nav>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="/public/shop.html">Shop</a></li>
+        <li><a href="/public/aboutus.html">About</a></li>
+        <li>
+          <a><i class="bx bx-search"></i></a>
+        </li>
+        <li>
+          <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
+        </li>
+        <li>
+          <a href="/public/cart.html"><i class="bx bx-cart"></i></a>
+          <span class="cart-icon-text"></span>
+        </li>
+      </ul>
+    </div>
+
     <div class="container">
       <div class="card">
         <img
@@ -79,7 +81,7 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">iPhone 12 Pro</h3>
-            <p class="card-price">Price $900.000</p>
+            <p class="card-price">Price $900.00</p>
           </div>
           <div class="icon-card">
             <i
@@ -90,7 +92,14 @@
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="1"
+            data-product-title="iPhone 12 Pro"
+            data-product-price="900.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
@@ -105,7 +114,7 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">Headphones</h3>
-            <p class="card-price">Price $80.000</p>
+            <p class="card-price">Price $80.00</p>
           </div>
           <div class="icon-card">
             <i
@@ -116,7 +125,14 @@
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="2"
+            data-product-title="Headphones"
+            data-product-price="80.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
@@ -131,7 +147,7 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">Laptop</h3>
-            <p class="card-price">Price $1.000.001</p>
+            <p class="card-price">Price $1000.00</p>
           </div>
           <div class="icon-card">
             <i
@@ -142,11 +158,17 @@
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="3"
+            data-product-title="Laptop"
+            data-product-price="1000.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
-
       <div class="card">
         <img
           src="https://istorepreowned.co.za/cdn/shop/products/iPhone_12_Pro_Gold_PDP_Image_Position-2__en-US_1.png?v=1710872855&width=1200"
@@ -157,18 +179,25 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">iPhone 12 Pro</h3>
-            <p class="card-price">Price $900.000</p>
+            <p class="card-price">Price $900.00</p>
           </div>
           <div class="icon-card">
             <i
               class="bx bx-heart fav"
-              data-product-id="4"
-              data-product-title="Phone 2"
+              data-product-id="1"
+              data-product-title="iPhone 12 Pro"
             ></i>
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="1"
+            data-product-title="iPhone 12 Pro"
+            data-product-price="900.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
@@ -183,18 +212,25 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">Headphones</h3>
-            <p class="card-price">Price $80.000</p>
+            <p class="card-price">Price $80.00</p>
           </div>
           <div class="icon-card">
             <i
               class="bx bx-heart fav"
-              data-product-id="5"
-              data-product-title="Headphone 2"
+              data-product-id="2"
+              data-product-title="Headphones"
             ></i>
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="2"
+            data-product-title="Headphones"
+            data-product-price="80.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
@@ -209,22 +245,28 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">Laptop</h3>
-            <p class="card-price">Price $1.000.001</p>
+            <p class="card-price">Price $1000.00</p>
           </div>
           <div class="icon-card">
             <i
               class="bx bx-heart fav"
-              data-product-id="6"
-              data-product-title="Laptop 2"
+              data-product-id="3"
+              data-product-title="Laptop"
             ></i>
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="3"
+            data-product-title="Laptop"
+            data-product-price="1000.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
-
       <div class="card">
         <img
           src="https://istorepreowned.co.za/cdn/shop/products/iPhone_12_Pro_Gold_PDP_Image_Position-2__en-US_1.png?v=1710872855&width=1200"
@@ -235,18 +277,25 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">iPhone 12 Pro</h3>
-            <p class="card-price">Price $900.000</p>
+            <p class="card-price">Price $900.00</p>
           </div>
           <div class="icon-card">
             <i
               class="bx bx-heart fav"
-              data-product-id="7"
-              data-product-title="iPhone 15 Pro"
+              data-product-id="1"
+              data-product-title="iPhone 12 Pro"
             ></i>
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="1"
+            data-product-title="iPhone 12 Pro"
+            data-product-price="900.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
@@ -261,18 +310,25 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">Headphones</h3>
-            <p class="card-price">Price $80.000</p>
+            <p class="card-price">Price $80.00</p>
           </div>
           <div class="icon-card">
             <i
               class="bx bx-heart fav"
-              data-product-id="8"
-              data-product-title="Headphones 3"
+              data-product-id="2"
+              data-product-title="Headphones"
             ></i>
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="2"
+            data-product-title="Headphones"
+            data-product-price="80.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
@@ -287,23 +343,32 @@
         <div class="icon-text">
           <div class="text-card">
             <h3 class="card-title">Laptop</h3>
-            <p class="card-price">Price $1.000.001</p>
+            <p class="card-price">Price $1000.00</p>
           </div>
           <div class="icon-card">
             <i
               class="bx bx-heart fav"
-              data-product-id="9"
-              data-product-title="Laptop 3"
+              data-product-id="3"
+              data-product-title="Laptop"
             ></i>
           </div>
         </div>
         <div class="card-buttons">
-          <button class="btn-buy">Add to Cart</button>
+          <button
+            class="btn-buy"
+            data-product-id="3"
+            data-product-title="Laptop"
+            data-product-price="1000.00"
+          >
+            Add to Cart
+          </button>
           <button class="btn-more"><strong>See More</strong></button>
         </div>
       </div>
     </div>
+
+    <script src="/scripts/burger.js"></script>
+    <script src="/scripts/favorites.js"></script>
+    <script src="/scripts/cart.js"></script>
   </body>
-  <script src="/scripts/burger.js"></script>
-  <script src="/scripts/favorites.js"></script>
 </html>
