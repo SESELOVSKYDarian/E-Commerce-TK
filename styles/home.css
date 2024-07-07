@@ -70,16 +70,7 @@ body::-webkit-scrollbar-thumb {
 
 #loading-logo {
   width: 100vh;
-  animation: rotate 6s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  animation: spin 3s infinite;
 }
 
 #loading-container.hidden {
@@ -134,7 +125,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menu-center {
-  margin-left: 3.2%;
+  top: 5%;
+  left: 10%;
+  transform: translate(10%, -5%);
 }
 
 .menu-container .menu-center li,
@@ -172,7 +165,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 22px;
   right: 13px;
-  background-color: #007bff;
+  background: linear-gradient(45deg, #373355, #3a25d6);
   color: #fff;
   font-size: 12px;
   padding: 4px 8px;
@@ -276,7 +269,6 @@ header {
   color: #000000;
   font-size: 1.8rem;
   text-align: right;
-  margin-left: 60%;
 }
 
 .headphone img {
@@ -447,7 +439,6 @@ input[type="radio"]:hover {
   background: linear-gradient(45deg, #373355, #3a25d6);
   border: none;
   border-radius: 5px;
-  color: white;
   padding: 10px 20px;
   font-size: 1em;
   font-weight: 600;
@@ -459,6 +450,11 @@ input[type="radio"]:hover {
 
 .shop-button:hover {
   background: linear-gradient(45deg, #3a25d6, #373355);
+}
+
+.no-decoration {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* popular */

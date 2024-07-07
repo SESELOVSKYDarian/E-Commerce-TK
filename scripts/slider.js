@@ -9,6 +9,10 @@ function cambiarMaxWidth(maxWidth) {
     document.querySelector("#imagenSlide").style.maxWidth = maxWidth;
 }
 
+function changePage(page) {
+    document.getElementById("shopNow").href = page;
+}
+
 document.querySelector("#radio1").addEventListener("click", () => {
     cambiarImagenYTexto(
         "/multimedia/images/products/phones/iphones/iphone12pro.png",
@@ -17,6 +21,7 @@ document.querySelector("#radio1").addEventListener("click", () => {
         "$900.000"
     );
     cambiarMaxWidth("70%");
+    changePage("/public/products/phones/apple/iphone12pro.html");
 });
 
 document.querySelector("#radio2").addEventListener("click", () => {
@@ -27,6 +32,7 @@ document.querySelector("#radio2").addEventListener("click", () => {
         "$660.900"
     );
     cambiarMaxWidth("82%");
+    changePage("/public/products/watches/apple/applewatchesseries7.html");
 });
 
 document.querySelector("#radio3").addEventListener("click", () => {
@@ -37,42 +43,5 @@ document.querySelector("#radio3").addEventListener("click", () => {
         "$120.000"
     );
     cambiarMaxWidth("98%");
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const carouselSlide = document.querySelector(".carousel-slide");
-    const carouselImages = document.querySelectorAll(".carousel-slide img");
-
-    // Configuración
-    const intervalTime = 2000; // Tiempo en milisegundos entre cada slide (ajustado a 2 segundos)
-    const slideWidth = carouselImages[0].clientWidth; // Ancho de cada slide
-    let slideIndex = 0;
-
-    // Ajuste inicial para centrar las imágenes
-    const initialOffset = (carouselSlide.clientWidth - slideWidth) / 2;
-    carouselSlide.style.transform = `translateX(-${initialOffset}px)`;
-
-    // Función para pasar al siguiente slide
-    function nextSlide() {
-        // Incrementa el índice del slide
-        slideIndex++;
-
-        // Establece el desplazamiento en el carrusel
-        carouselSlide.style.transition = 'transform 0.4s ease';
-        carouselSlide.style.transform = `translateX(-${initialOffset + slideIndex * slideWidth}px)`;
-
-        // Si llega al último slide, vuelve al inicio
-        if (slideIndex >= carouselImages.length - 1) {
-            setTimeout(() => {
-                slideIndex = 0;
-                carouselSlide.style.transition = 'none';
-                carouselSlide.style.transform = `translateX(-${initialOffset}px)`;
-                setTimeout(() => carouselSlide.style.transition = 'transform 0.4s ease', 50);
-            }, 400);
-        }
-    }
-
-    // Inicia el carrusel automáticamente
-    setInterval(nextSlide, intervalTime);
+    changePage("/public/products/monitors/samsung/monitorsmartm8slim.html");
 });
