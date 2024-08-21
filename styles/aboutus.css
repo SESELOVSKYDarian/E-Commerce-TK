@@ -226,10 +226,84 @@ body::-webkit-scrollbar-thumb {
   .mobile-menu.active {
     display: flex;
     position: sticky;
-    top: 8.5%;
+    top: 9.7%;
     z-index: 2;
   }
 }
+
+/* Asegura que el contenedor de búsqueda esté sticky y debajo del nav */
+.search-container {
+  position: sticky;
+  top: 5.4em; /* Manténlo pegado al tope de la pantalla */
+  z-index: 2000; /* Asegúrate de que esté por encima de otros elementos */
+  background-color: #fff; /* Fondo blanco para que se distinga del contenido detrás */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Pequeña sombra para destacarlo */
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    top: 21em; /* Ajuste el top a 10em en pantallas pequeñas */
+  }
+}
+
+/* Dropdown de búsqueda */
+.search-dropdown {
+  position: absolute;
+  top: 100%; /* Justo debajo del search-container */
+  left: 0;
+  right: 0;
+  z-index: 3000; /* Asegúrate de que esté por encima de otros contenidos */
+  background-color: #ebebebf5; /* Color de fondo del dropdown */
+  border-radius: 0 0 15px 15px; /* Borde opcional */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  padding: 10px;
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(-10px); /* Inicialmente desplazado hacia arriba */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.search-dropdown.show {
+  opacity: 1; /* Visible cuando tiene la clase 'show' */
+  transform: translateY(0); /* Regresa a su posición original */
+}
+
+/* Input de búsqueda */
+.search-input {
+  width: 100%; /* Ajusta el ancho para encajar en el dropdown */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #ebebebf5;
+  outline-color: #0a05664f;
+}
+
+/* Lista de resultados */
+.search-results {
+  list-style-type: none; /* Remueve el estilo por defecto de la lista */
+  padding: 0;
+  margin: 0;
+  display: none; /* Oculta inicialmente */
+}
+
+.search-results.show {
+  display: block; /* Muestra cuando tiene la clase 'show' */
+}
+
+.search-results li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-results li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.search-results li a:hover {
+  color: #241bd1;
+}
+
 /* about us */
 main {
   margin-top: 10px;
@@ -238,10 +312,12 @@ main {
 .about h2 {
   margin: 10px auto;
   font-size: 3rem;
+  color: #000;
   font-weight: bold;
 }
 
 .about h3 {
+  color: #141414;
   font-size: 2rem;
   font-weight: 600;
   margin: 10px 0 10px 0;
@@ -253,6 +329,7 @@ main {
 }
 
 .reviews h4 {
+  color: #141414;
   font-size: 2rem;
   font-weight: bold;
   margin: 10px 0 15px 0;
@@ -373,6 +450,30 @@ main {
 }
 
 @media (max-width: 768px) {
+  .aboutus {
+    margin: 10px;
+  }
+
+  .reviews-general {
+    flex-wrap: wrap;
+  }
+
+  .review {
+    max-width: fit-content;
+  }
+
+  .end {
+    flex-wrap: wrap;
+  }
+
+  .community {
+    max-width: fit-content;
+  }
+
+  .footer {
+    max-width: fit-content;
+  }
+
   .footer-text {
     font-size: 1em;
   }

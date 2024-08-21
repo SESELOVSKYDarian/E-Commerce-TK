@@ -45,3 +45,7 @@ document.querySelector("#radio3").addEventListener("click", () => {
     cambiarMaxWidth("98%");
     changePage("/public/products/monitors/samsung/monitorsmartm8slim.html");
 });
+
+
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);

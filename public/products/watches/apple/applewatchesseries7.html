@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apple Watch Series 7 - TK</title>
-    <link rel="stylesheet" href="/styles/products.css" />
     <link
       rel="shortcut icon"
       href="/multimedia/images/logo/logo-white-1.png"
@@ -14,6 +12,12 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/styles/product.css" />
+    <script src="/scripts/cart.js"></script>
+    <script src="/scripts/burger.js"></script>
+    <script src="/scripts/favorites.js"></script>
+    <script src="/scripts/favorite-list.js"></script>
+    <title>Apple Watch Series 7 - TK</title>
   </head>
   <body>
     <div id="loading-container">
@@ -37,10 +41,10 @@
       <div class="menu-right">
         <ul>
           <li>
-            <a><i class="bx bx-search"></i></a>
+            <a class="search-icon"><i class="bx bx-search"></i></a>
           </li>
           <li>
-            <a href="#"><i class="bx bx-heart"></i></a>
+            <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
           </li>
           <li>
             <a href="/public/cart.html" class="cart-icon"
@@ -58,10 +62,12 @@
         <li><a href="/public/shop.html">Shop</a></li>
         <li><a href="/public/aboutus.html">About</a></li>
         <li>
-          <a><i class="bx bx-search"></i></a>
+          <a class="search-icon"
+            ><i id="search-icon" class="bx bx-search"></i
+          ></a>
         </li>
         <li>
-          <a href="#"><i class="bx bx-heart"></i></a>
+          <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
         </li>
         <li>
           <a href="/public/cart.html"><i class="bx bx-cart"></i></a>
@@ -69,11 +75,142 @@
         </li>
       </ul>
     </div>
-    <section>
-      <div class="product">
-        <h2>Apple Watch Series 7</h2>
+
+    <div class="search-container">
+      <div class="search-wrapper">
+        <div class="search-dropdown" id="searchDropdown">
+          <input type="text" class="search-input" placeholder="Search..." />
+          <ul class="search-results" id="searchResults">
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/cellphones/cellphones.html"
+                class="search"
+                >Cellphones</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/game-consoles/game-consoles.html"
+                class="search"
+                >Game consoles</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/computers/computer.html"
+                class="search"
+                >Computers</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/gaming/headphones.html"
+                class="search"
+                >Headphones</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a href="/public/products/index/gaming/mouses.html" class="search"
+                >Mouses</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/brands/tablets.html"
+                class="search"
+                >Tablets</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/gaming/keyboards.html"
+                class="search"
+                >Keyboards</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a href="/public/products/index/clocks/clocks.html" class="search"
+                >Clocks</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/glasses/glasses.html"
+                class="search"
+                >Virtual Reality Glasses</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a href="/public/products/index/brands/apple.html" class="search"
+                >Apple</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <main>
+      <article class="product">
+        <section
+          class="product__slider default-container"
+          aria-label="Product preview"
+        >
+          <img
+            src="/multimedia/images/products/watches/apple-watches/apple-watch-series-7.png"
+            alt="Apple Watch Series 7"
+            class="image-box__src"
+            data-product-id="item-cart-1"
+            tabindex="0"
+          />
+        </section>
+        <section
+          class="product__content default-container"
+          aria-label="Product content"
+        >
+          <header>
+            <h2 class="company-name" tabindex="0">Apple</h2>
+            <p class="product__name" tabindex="0">Apple Watch Series 7</p>
+            <h3 class="product__title" tabindex="0">Apple Watch Series 7</h3>
+          </header>
+          <p class="product__description" tabindex="0">
+            The Apple Watch Series 7 features a larger, always-on Retina
+            display, durable design, and advanced health monitoring capabilities
+            including ECG and blood oxygen measurements. It offers faster
+            charging and new colors, making it a versatile companion for fitness
+            and daily life.
+          </p>
+          <div class="pricecart">
+            <div class="product__price">
+              <div class="discount-price">
+                <p class="discount-price__value" tabindex="0">
+                  $660.900
+                  <span class="sr-only">pesos</span>
+                </p>
+                <p class="discount-price__discount" tabindex="0">4%</p>
+              </div>
+              <div class="full-price">
+                <p tabindex="0">
+                  $750.500
+                  <span class="sr-only">pesos</span>
+                </p>
+              </div>
+            </div>
+            <button
+              class="btn-buy"
+              data-product-id="1"
+              data-product-title="Apple Watch Series 7"
+              data-product-price="650000"
+              data-product-image="/multimedia/images/products/watches/apple-watches/apple-watch-series-7.png"
+              data-product-url="/public\products\watches\apple\applewatchesseries7.html"
+            >
+              <i class="bx bx-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </section>
+      </article>
+    </main>
   </body>
-  <script src="/scripts/cart.js"></script>
+  <script src="/scripts/search-bar.js"></script>
 </html>

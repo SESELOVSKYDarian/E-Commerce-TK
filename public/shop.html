@@ -37,28 +37,32 @@
       <div class="menu-right">
         <ul>
           <li>
-            <a><i class="bx bx-search"></i></a>
+            <a href="/public/profile.html"><i class="bx bx-user"></i></a>
+          </li>
+          <li>
+            <a id="searchIcon"><i class="bx bx-search"></i></a>
           </li>
           <li>
             <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
           </li>
           <li>
-            <a href="/public/cart.html" class="cart-icon"
-              ><i class="bx bx-cart"></i
-            ></a>
+            <a href="/public/cart.html" class="cart-icon">
+              <i class="bx bx-cart"></i>
+            </a>
             <span class="cart-icon-text"></span>
           </li>
         </ul>
       </div>
       <div class="menu-hamburger"><i class="bx bx-menu"></i></div>
     </nav>
+
     <div class="mobile-menu">
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="#">Shop</a></li>
         <li><a href="/public/aboutus.html">About</a></li>
         <li>
-          <a><i class="bx bx-search"></i></a>
+          <a class="search-icon"><i class="bx bx-search"></i></a>
         </li>
         <li>
           <a href="/public/favorites.html"><i class="bx bx-heart"></i></a>
@@ -69,17 +73,127 @@
         </li>
       </ul>
     </div>
+
+    <div class="search-container">
+      <div class="search-wrapper">
+        <div class="search-dropdown" id="searchDropdown">
+          <input type="text" class="search-input" placeholder="Search..." />
+          <ul class="search-results" id="searchResults">
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/cellphones/cellphones.html"
+                class="search"
+                >Cellphones</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/game-consoles/game-consoles.html"
+                class="search"
+                >Game consoles</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/computers/computer.html"
+                class="search"
+                >Computers</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/gaming/headphones.html"
+                class="search"
+                >Headphones</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a href="/public/products/index/gaming/mouses.html" class="search"
+                >Mouses</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/brands/tablets.html"
+                class="search"
+                >Tablets</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/gaming/keyboards.html"
+                class="search"
+                >Keyboards</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a href="/public/products/index/clocks/clocks.html" class="search"
+                >Clocks</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a
+                href="/public/products/index/glasses/glasses.html"
+                class="search"
+                >Virtual Reality Glasses</a
+              >
+            </li>
+            <li class="kindOfsearch">
+              <a href="/public/products/index/brands/apple.html" class="search"
+                >Apple</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="page">
-      <h2>Shop</h2>
+      <h2>
+        Shop <span id="filterIcon"><i class="bx bx-filter"></i></span>
+      </h2>
       <div class="shop">
         <div class="filters">
-          <h3>Filters</h3>
+          <h3 class="title-filters">Filters</h3>
+          <div class="filter-content">
+            <div class="categories">
+              <h4 id="filters-titles">Categories</h4>
+              <a class="Filters" href="#most-purchased">- Most Purchased</a>
+              <br />
+              <a class="Filters" href="#on-sale">- On sale</a>
+              <br />
+              <a class="Filters" href="#gamer">- Gamer</a>
+              <br />
+            </div>
+            <div class="pricing">
+              <h4 id="filters-titles">Prices</h4>
+              <div class="price-filter-container">
+                <label for="minPrice">Min Price: $</label>
+                <input
+                  type="number"
+                  id="minPrice"
+                  name="minPrice"
+                  min="0"
+                  placeholder="0"
+                />
+                <label for="maxPrice">Max Price: $</label>
+                <input
+                  type="number"
+                  id="maxPrice"
+                  name="maxPrice"
+                  min="0"
+                  placeholder="9999999"
+                />
+                <button id="filterButton">Apply Filter</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="products">
           <section class="most-purchased">
-            <h3 class="title-cont">Most Purchased</h3>
+            <h3 id="most-purchased" class="title-cont">Most Purchased</h3>
             <div class="container">
-              <div class="card">
+              <div class="card product" data-product-price="900000">
                 <img
                   src="https://istorepreowned.co.za/cdn/shop/products/iPhone_12_Pro_Gold_PDP_Image_Position-2__en-US_1.png?v=1710872855&width=1200"
                   alt="iPhone"
@@ -89,7 +203,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">iPhone 12 Pro</h3>
-                    <p class="card-price">Price $70</p>
+                    <p class="card-price">Price $900.000</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -104,30 +218,36 @@
                     class="btn-buy"
                     data-product-id="1"
                     data-product-title="iPhone 12 Pro"
-                    data-product-price="70.00"
+                    data-product-price="900000"
+                    data-product-image="https://istorepreowned.co.za/cdn/shop/products/iPhone_12_Pro_Gold_PDP_Image_Position-2__en-US_1.png?v=1710872855&width=1200"
+                    data-product-url="/public/products/phones/apple/iphone12pro.html"
                   >
                     Add to Cart
                   </button>
-                  <button class="btn-more"><strong>See More</strong></button>
+                  <button class="btn-more">
+                    <a href="/public/products/phones/apple/iphone12pro.html"
+                      ><strong>See More</strong></a
+                    >
+                  </button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="87000">
                 <img
                   src="https://www.jbhifi.com.au/cdn/shop/products/659931-Product-0-I-638279266805961313.jpg?v=1692769393"
-                  alt="Headphones"
+                  alt="JBL Tune 520BT"
                   class="card-img"
                 />
                 <hr />
                 <div class="icon-text">
                   <div class="text-card">
-                    <h3 class="card-title">Headphones</h3>
-                    <p class="card-price">Price $30</p>
+                    <h3 class="card-title">JBL Tune 520BT</h3>
+                    <p class="card-price">Price $87.000</p>
                   </div>
                   <div class="icon-card">
                     <i
                       class="bx bx-heart fav"
                       data-product-id="2"
-                      data-product-title="Headphones"
+                      data-product-title="JBL Tune 520BT"
                     ></i>
                   </div>
                 </div>
@@ -135,8 +255,10 @@
                   <button
                     class="btn-buy"
                     data-product-id="2"
-                    data-product-title="Headphones"
-                    data-product-price="30.00"
+                    data-product-title="JBL Tune 520BT"
+                    data-product-price="87000"
+                    data-product-image="https://www.jbhifi.com.au/cdn/shop/products/659931-Product-0-I-638279266805961313.jpg?v=1692769393"
+                    data-product-url="/public\products\index\gaming\specific-products\jbltune520bt.html"
                   >
                     Add to Cart
                   </button>
@@ -144,23 +266,23 @@
                 </div>
               </div>
 
-              <div class="card">
+              <div class="card product" data-product-price="1200420">
                 <img
                   src="https://pccenter.com.ar/cdn/shop/products/F223otosTiendaOnline@2x.jpg?v=1681919837"
-                  alt="Laptop"
+                  alt="Notebook Asus X515ea"
                   class="card-img"
                 />
                 <hr />
                 <div class="icon-text">
                   <div class="text-card">
-                    <h3 class="card-title">Laptop</h3>
-                    <p class="card-price">Price $50</p>
+                    <h3 class="card-title">Notebook Asus X515ea</h3>
+                    <p class="card-price">Price $1.200.420</p>
                   </div>
                   <div class="icon-card">
                     <i
                       class="bx bx-heart fav"
                       data-product-id="3"
-                      data-product-title="Laptop"
+                      data-product-title="Notebook Asus X515ea"
                     ></i>
                   </div>
                 </div>
@@ -168,15 +290,15 @@
                   <button
                     class="btn-buy"
                     data-product-id="3"
-                    data-product-title="Laptop"
-                    data-product-price="50.00"
+                    data-product-title="Notebook Asus X515ea"
+                    data-product-price="1200420"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="12000">
                 <img
                   src="https://acdn.mitiendanube.com/stores/001/668/601/products/41-77de378508ed0f1a4616198142554974-640-0.png"
                   alt="Clock"
@@ -186,7 +308,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Clock Smartwach D20S</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $12.000</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -201,24 +323,24 @@
                     class="btn-buy"
                     data-product-id="4"
                     data-product-title="Clock Smartwach D20S"
-                    data-product-price="50.00"
+                    data-product-price="12000"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="422999">
                 <img
                   src="https://cdn-ipoint.waugi.com.ar/25136-large_default/apple-airpods-pro-2da-generacion.jpg"
-                  alt="Airpods"
+                  alt="Airpods Pro White"
                   class="card-img"
                 />
                 <hr />
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Airpods Pro White</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $422.999</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -233,7 +355,7 @@
                     class="btn-buy"
                     data-product-id="5"
                     data-product-title="Airpods Pro White"
-                    data-product-price="50.00"
+                    data-product-price="422999"
                   >
                     Add to Cart
                   </button>
@@ -243,9 +365,9 @@
             </div>
           </section>
           <section class="on-sale">
-            <h3 class="title-cont">On sale</h3>
+            <h3 id="on-sale" class="title-cont">On sale</h3>
             <div class="container">
-              <div class="card">
+              <div class="card product" data-product-price="3499999">
                 <img
                   src="https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-15-pro-natural-titanium.png?v=c55f0ca6"
                   alt="Iphone 15 Pro Max"
@@ -254,14 +376,14 @@
                 <hr />
                 <div class="icon-text">
                   <div class="text-card">
-                    <h3 class="card-title">Iphone 15 Pro Max</h3>
-                    <p class="card-price">Price $70</p>
+                    <h3 class="card-title">iPhone 15 Pro Max</h3>
+                    <p class="card-price">Price $3.499.999</p>
                   </div>
                   <div class="icon-card">
                     <i
                       class="bx bx-heart fav"
                       data-product-id="6"
-                      data-product-title="Iphone 15 Pro Max"
+                      data-product-title="iPhone 15 Pro Max"
                     ></i>
                   </div>
                 </div>
@@ -269,15 +391,15 @@
                   <button
                     class="btn-buy"
                     data-product-id="6"
-                    data-product-title="Iphone 15 Pro Max"
-                    data-product-price="70.00"
+                    data-product-title="iPhone 15 Pro Max"
+                    data-product-price="3499999"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="1686000">
                 <img
                   src="https://arsonyb2c.vtexassets.com/arquivos/ids/362072-800-800?v=638162209374270000&width=800&height=800&aspect=true"
                   alt="PS5"
@@ -287,7 +409,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Playstation 5</h3>
-                    <p class="card-price">Price $30</p>
+                    <p class="card-price">Price $1.686.000</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -310,23 +432,23 @@
                 </div>
               </div>
 
-              <div class="card">
+              <div class="card product" data-product-price="429050">
                 <img
-                  src="https://argentina.solutekla.com/photo/1/apple/tablets/ipad_pro_de_11_pulgadas_y_128_gb_con_wi_fi_plata/ipad_pro_de_11_pulgadas_y_128_gb_con_wi_fi_plata_0001"
-                  alt="Ipad Air 2019"
+                  src="https://cyberdeals.lk/wp-content/uploads/2020/11/iPad-Air-3-3-300x300.png"
+                  alt="iPad Air 2019"
                   class="card-img"
                 />
                 <hr />
                 <div class="icon-text">
                   <div class="text-card">
-                    <h3 class="card-title">Ipad Air 2019</h3>
-                    <p class="card-price">Price $50</p>
+                    <h3 class="card-title">iPad Air 2019</h3>
+                    <p class="card-price">Price $429.050</p>
                   </div>
                   <div class="icon-card">
                     <i
                       class="bx bx-heart fav"
                       data-product-id="8"
-                      data-product-title="Ipad Air 2019"
+                      data-product-title="iPad Air 2019"
                     ></i>
                   </div>
                 </div>
@@ -334,7 +456,7 @@
                   <button
                     class="btn-buy"
                     data-product-id="8"
-                    data-product-title="Ipad Air 2019"
+                    data-product-title="iPad Air 2019"
                     data-product-price="50.00"
                   >
                     Add to Cart
@@ -342,7 +464,7 @@
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="80000">
                 <img
                   src="https://m.media-amazon.com/images/I/713TUYjagQL.jpg"
                   alt="Speaker"
@@ -352,7 +474,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Wireless Portable Speaker</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $80.000</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -367,14 +489,14 @@
                     class="btn-buy"
                     data-product-id="9"
                     data-product-title="Wireless Portable Speaker"
-                    data-product-price="50.00"
+                    data-product-price="80000"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="230100">
                 <img
                   src="https://images.fravega.com/f300/95d066e58df4e07a8594edaf18b64f61.jpg.webp"
                   alt="Virtual Reality Glasses"
@@ -384,7 +506,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Virtual Reality Glasses</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $230.100</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -399,7 +521,7 @@
                     class="btn-buy"
                     data-product-id="10"
                     data-product-title="Virtual Reality Glasses"
-                    data-product-price="50.00"
+                    data-product-price="230100"
                   >
                     Add to Cart
                   </button>
@@ -409,9 +531,9 @@
             </div>
           </section>
           <section class="gamer">
-            <h3 class="title-cont">Gamer</h3>
+            <h3 id="gamer" class="title-cont">Gamer</h3>
             <div class="container">
-              <div class="card">
+              <div class="card product data-product-price="75999">
                 <img
                   src="https://www.sevenelectronics.com.ar/images/000779813771045190947st-bold-angulo1-0a70a10dad821a27f016279990303166-640-0.jpg"
                   alt="Gaming Headphones"
@@ -421,7 +543,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Gaming Headphones</h3>
-                    <p class="card-price">Price $70</p>
+                    <p class="card-price">Price $75.999</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -436,16 +558,16 @@
                     class="btn-buy"
                     data-product-id="11"
                     data-product-title="Gaming Headphones"
-                    data-product-price="70.00"
+                    data-product-price="75999"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product data-product-price="230000">
                 <img
-                  src="https://nextgames.com.ar/img/Public/1040-producto-switch-neon-2-1455.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO68P34SBk3HhjkPeN6GlrHmMniTX30VrbzQ&s"
                   alt="Nintendo Switch"
                   class="card-img"
                 />
@@ -453,7 +575,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Nintendo Switch</h3>
-                    <p class="card-price">Price $30</p>
+                    <p class="card-price">Price $230.000</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -468,7 +590,7 @@
                     class="btn-buy"
                     data-product-id="12"
                     data-product-title="Nintendo Switch"
-                    data-product-price="30.00"
+                    data-product-price="230000"
                   >
                     Add to Cart
                   </button>
@@ -476,7 +598,7 @@
                 </div>
               </div>
 
-              <div class="card">
+              <div class="card product" data-product-price="43670">
                 <img
                   src="https://dobleclicknet.com/wp-content/uploads/2020/11/G413-2.png"
                   alt="Gaming Keyboard"
@@ -486,7 +608,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Gaming Keyboard</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $43.670</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -501,14 +623,15 @@
                     class="btn-buy"
                     data-product-id="13"
                     data-product-title="Gaming Keyboard"
-                    data-product-price="50.00"
+                    data-product-price="43670"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              
+              <div class="card product" data-product-price="1230550">
                 <img
                   src="https://http2.mlstatic.com/D_NQ_NP_619450-MLA51636980544_092022-O.webp"
                   alt="Gaming PC"
@@ -518,7 +641,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Gaming PC</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $1.230.550</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -533,14 +656,14 @@
                     class="btn-buy"
                     data-product-id="14"
                     data-product-title="Gaming PC"
-                    data-product-price="50.00"
+                    data-product-price="1230550"
                   >
                     Add to Cart
                   </button>
                   <button class="btn-more"><strong>See More</strong></button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card product" data-product-price="53000">
                 <img
                   src="https://m.media-amazon.com/images/I/61Mk3YqYHpL.AC_UF894,1000_QL80.jpg"
                   alt="Mouse"
@@ -550,7 +673,7 @@
                 <div class="icon-text">
                   <div class="text-card">
                     <h3 class="card-title">Gaming Mouse Bluetooth</h3>
-                    <p class="card-price">Price $50</p>
+                    <p class="card-price">Price $53.000</p>
                   </div>
                   <div class="icon-card">
                     <i
@@ -565,7 +688,7 @@
                     class="btn-buy"
                     data-product-id="15"
                     data-product-title="Gaming Mouse Bluetooth"
-                    data-product-price="50.00"
+                    data-product-price="53000"
                   >
                     Add to Cart
                   </button>
@@ -580,5 +703,7 @@
   </body>
   <script src="/scripts/burger.js"></script>
   <script src="/scripts/favorites.js"></script>
-  <script src="/scripts/cart.js"></script>
+  <script src="/scripts/cart.js" defer></script>
+  <script src="/scripts/filters.js"></script>
+  <script src="/scripts/search-bar.js"></script>
 </html>

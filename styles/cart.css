@@ -218,7 +218,7 @@ body::-webkit-scrollbar-thumb {
   .mobile-menu.active {
     display: flex;
     position: sticky;
-    top: 8.5%;
+    top: 8.7%;
     z-index: 2;
   }
 }
@@ -247,12 +247,28 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cart-item {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+
+.cart-flex {
+  display: flex;
+  gap: 15em;
+  justify-content: space-between;
+}
+
+.middle-cart {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+}
+
+.end-cart {
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
 }
 
 .cart-item img {
@@ -265,6 +281,20 @@ body::-webkit-scrollbar-thumb {
 .cart-item-info {
   display: flex;
   align-items: center;
+}
+
+.cart-item-title {
+  display: flex;
+  align-items: center;
+  max-width: 10rem; /* Ajusta este valor según tus necesidades */
+  overflow: hidden; /* Asegura que el contenido excedente se oculte si es necesario */
+  word-wrap: break-word; /* Permite que el texto largo se divida en múltiples líneas */
+}
+
+.cart-item-title img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .cart-item-title a {
@@ -297,6 +327,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cart-item-price {
+  display: flex;
+  align-items: center;
   font-size: 1.25rem;
   color: #333;
 }
@@ -332,6 +364,7 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(0deg);
   }
 }
+
 .cart-total {
   text-align: center;
   font-size: 1.5rem;
@@ -366,4 +399,259 @@ body::-webkit-scrollbar-thumb {
 
 .clear-cart:hover {
   transform: scale(1.1);
+}
+
+.cart-item-see-more {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #11008f;
+  transition: all 0.5s ease;
+}
+
+.cart-item-see-more:hover {
+  color: #6050d6;
+}
+
+/* Asegura que el contenedor de búsqueda esté sticky y debajo del nav */
+.search-container {
+  position: sticky;
+  top: 5.4em; /* Manténlo pegado al tope de la pantalla */
+  z-index: 2000; /* Asegúrate de que esté por encima de otros elementos */
+  background-color: #fff; /* Fondo blanco para que se distinga del contenido detrás */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Pequeña sombra para destacarlo */
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    top: 22em; /* Ajuste el top a 10em en pantallas pequeñas */
+  }
+}
+
+/* Dropdown de búsqueda */
+.search-dropdown {
+  position: absolute;
+  top: 100%; /* Justo debajo del search-container */
+  left: 0;
+  right: 0;
+  z-index: 3000; /* Asegúrate de que esté por encima de otros contenidos */
+  background-color: #ebebebf5; /* Color de fondo del dropdown */
+  border-radius: 0 0 15px 15px; /* Borde opcional */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  padding: 10px;
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(-10px); /* Inicialmente desplazado hacia arriba */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.search-dropdown.show {
+  opacity: 1; /* Visible cuando tiene la clase 'show' */
+  transform: translateY(0); /* Regresa a su posición original */
+}
+
+/* Input de búsqueda */
+.search-input {
+  width: 100%; /* Ajusta el ancho para encajar en el dropdown */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #ebebebf5;
+  outline-color: #0a05664f;
+}
+
+/* Lista de resultados */
+.search-results {
+  list-style-type: none; /* Remueve el estilo por defecto de la lista */
+  padding: 0;
+  margin: 0;
+  display: none; /* Oculta inicialmente */
+}
+
+.search-results.show {
+  display: block; /* Muestra cuando tiene la clase 'show' */
+}
+
+.search-results li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-results li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.search-results li a:hover {
+  color: #241bd1;
+}
+
+/* footer */
+.footer {
+  background-color: #191725;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0px -15px 30px #0000005d;
+}
+
+.footer-container {
+  font-family: "Jost", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.copy {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+}
+
+.footer-text + .footer-text {
+  margin-top: 10px;
+}
+
+.footer-icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-icon-link {
+  margin: 0 10px;
+  color: #3a25d6;
+  text-decoration: none;
+}
+
+.footer-icon {
+  font-size: 2.4em;
+  transition: all 0.5s ease;
+}
+
+.footer-icon:hover {
+  color: #5b46ff;
+  transform: scale(1.2);
+}
+
+.icon-text {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin: 2%;
+}
+
+.icon-text p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+@media (max-width: 1200px) {
+  .cart-flex {
+    gap: 10em;
+  }
+
+  .middle-cart {
+    gap: 3em;
+  }
+
+  .end-cart {
+    gap: 3em;
+  }
+}
+
+@media (max-width: 900px) {
+  .cart-flex {
+    gap: 5em;
+  }
+
+  .middle-cart {
+    gap: 3em;
+  }
+
+  .end-cart {
+    gap: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 1em;
+  }
+
+  .footer-icons {
+    flex-direction: column;
+  }
+
+  .icon-text {
+    margin: 15px 0;
+  }
+
+  .footer-icon {
+    font-size: 2em;
+  }
+
+  .container {
+    margin: 1em;
+  }
+
+  .cart-flex {
+    gap: 0;
+  }
+
+  .middle-cart {
+    gap: 1.5em;
+  }
+
+  .end-cart {
+    gap: 1.5em;
+  }
+}
+
+@media (max-width: 570px) {
+  .cart-item-title {
+    max-width: fit-content;
+  }
+
+  .cart-flex {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .cart-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .cart-item-title img {
+    width: 50px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+
+  .middle-cart {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .end-cart {
+    justify-content: space-between;
+  }
+
+  .cart-item-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
